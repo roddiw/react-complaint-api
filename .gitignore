@@ -1,0 +1,6 @@
+CustomerApi/bin/
+CustomerApi/obj/
+CustomerApiTests/bin/
+CustomerApiTests/obj/
+*.user
+.vs/
