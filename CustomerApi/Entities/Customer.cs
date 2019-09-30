@@ -15,7 +15,7 @@ namespace CustomerApi.Entities
         [Required, MaxLength(100)]
         public string LastName { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public string EmailAddress { get; set; }
 
         public Customer()
         {
@@ -25,12 +25,12 @@ namespace CustomerApi.Entities
             long id,
             string firstName,
             string lastName,
-            DateTime dateOfBirth)
+            string emailAddress)
         {
             this.Id = id;
             this.FirstName = firstName;
             this.LastName = lastName;
-            this.DateOfBirth = dateOfBirth;
+            this.EmailAddress = emailAddress;
         }
     }
 }

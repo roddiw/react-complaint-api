@@ -22,7 +22,7 @@ namespace CustomerApiTests
             Assert.Equal(returnedCustomer.Id, customer.Id);
             Assert.Equal(returnedCustomer.FirstName, customer.FirstName);
             Assert.Equal(returnedCustomer.LastName, customer.LastName);
-            Assert.Equal(returnedCustomer.DateOfBirth, customer.DateOfBirth);
+            Assert.Equal(returnedCustomer.EmailAddress, customer.EmailAddress);
         }
 
         [Fact]
