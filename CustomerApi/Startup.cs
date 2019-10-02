@@ -30,7 +30,7 @@ namespace CustomerApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CustomerDbContext>(options => 
+            services.AddDbContext<CustomerDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Customer");
                 options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
@@ -62,6 +62,11 @@ namespace CustomerApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Customer API v1");
                 c.RoutePrefix = "";
             });
+
+            app.UseCors(builder =>
+    {
+        builder.WithOrigins("http://localhost:3000");
+    });
 
             app.UseMvc();
         }
